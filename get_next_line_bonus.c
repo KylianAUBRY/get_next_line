@@ -27,7 +27,7 @@ char	*get_next_line(int fd)
 		ft_buf_cut(buff[fd]);
 		dest = ft_join(dest, buff[fd]);
 	}
-	while (i > 0 && ft_chr(buff) == 0)
+	while (i > 0 && ft_chr(buff[fd]) == 0)
 	{
 		i = read(fd, buff[fd], BUFFER_SIZE);
 		if (i <= 0)
